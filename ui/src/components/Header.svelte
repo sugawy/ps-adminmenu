@@ -12,7 +12,7 @@
 
 {#if hasSearch}
 	<div
-		class="w-full h-[4.5vh] rounded-[0.5vh] flex items-center justify-center gap-[1vh] bg-tertiary"
+		class="w-full h-[4.5vh] rounded-[0.5vh] flex items-center justify-center gap-[1vh] bg-tertiary bg-opacity-92"
 	>
 		<i class="fas fa-magnifying-glass text-[1.5vh]" />
 		<input

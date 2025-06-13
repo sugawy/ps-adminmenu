@@ -28,7 +28,7 @@
                     <div class="w-fit flex justify-between items-center text-gray-400 font-medium -mb-[0.5vh]">
                         <p class="text-[1.2vh]">{message.fullname}</p>
                     </div>
-                    <div class="w-fit max-w-[85%] mt-[0.5vh] p-[1vh] break-words text-start rounded-lg {$PLAYER && $PLAYER_DATA.cid === message.citizenid ? "bg-accent" : "bg-tertiary"}">
+                    <div class="w-fit max-w-[85%] mt-[0.5vh] p-[1vh] break-words text-start rounded-lg {$PLAYER && $PLAYER_DATA.cid === message.citizenid ? "bg-accent" : "bg-tertiary bg-opacity-92"}">
                         <p>{message.message}</p>
                     </div>
                     <p class="text-[1vh] ml-[0.5vh]">{timeAgo(Number(message.time))}</p>

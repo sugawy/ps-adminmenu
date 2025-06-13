@@ -8,7 +8,7 @@
 
 <button
 	title={tooltiptext}
-	class="w-[4vh] h-[4vh] rounded-[0.5vh] hover:bg-tertiary {$ACTIVE_PAGE == value ? 'bg-tertiary' : ''}
+	class="w-[4vh] h-[4vh] rounded-[0.5vh] hover:bg-tertiary bg-opacity-92 {$ACTIVE_PAGE == value ? 'bg-tertiary bg-opacity-92' : ''}
 		relative
 		before:content-[attr(data-tip)]
 		before:absolute
@@ -17,7 +17,7 @@
 		before:px-[1vh]
 		before:py-[0.5vh]
 		before:-translate-x-full before:-translate-y-1/2
-		before:bg-tertiary before:text-white
+		before:bg-tertiary bg-opacity-92 before:text-white
 		before:rounded-md before:opacity-0
 		before:translate-all
 

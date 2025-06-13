@@ -35,7 +35,7 @@
 </script>
 
 <div
-	class=" bg-tertiary rounded-[0.5vh] {dropdownActive
+	class=" bg-tertiary bg-opacity-92 rounded-[0.5vh] {dropdownActive
 		? ''
 		: 'hover:bg-opacity-90'}"
 >
@@ -68,7 +68,7 @@
 						/>
 					{:else if i.option === 'button'}
 						<button
-							class="h-[3.8vh] px-[1.5vh] rounded-[0.5vh] bg-secondary hover:bg-opacity-90 border-[0.1vh] border-primary"
+							class="h-[3.8vh] px-[1.5vh] rounded-[0.5vh] bg-secondary bg-opacity-90 hover:bg-opacity-90 border-[0.1vh] border-primary"
 							on:click={() => {
 								sendData(i.event, i.type)
 							}}

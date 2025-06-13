@@ -2,7 +2,7 @@
 	export let label
 </script>
 
-<button class="w-full flex justify-between rounded-[0.5vh] bg-tertiary items-center">
+<button class="w-full flex justify-between rounded-[0.5vh] bg-tertiary bg-opacity-92 items-center">
     <div class="flex items-center p-[2vh]">
         <i class="fas fa-angle-right mr-[1vh]"></i>
         <p class="text-[1.5vh]">{label ? label : ''}</p>

@@ -84,7 +84,7 @@
     width: fit-content;
     /* padding: 0 0.2vw; */
 
-    background: linear-gradient(0deg, #242424, #242424), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(0deg,rgb(180, 22, 22),rgb(199, 28, 28)), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
     border: 1px solid rgba(255, 255, 255, 0.1);
 
     color: var(--app-name);

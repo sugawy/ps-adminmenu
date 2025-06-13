@@ -17,7 +17,7 @@
 >
 	<div class="mb-auto">
 		<button
-			class="w-[4vh] h-[4vh] rounded-[0.5vh] hover:bg-tertiary"
+			class="w-[4vh] h-[4vh] rounded-[0.5vh] hover:bg-tertiary bg-opacity-92"
 			on:click={() => MENU_WIDE.update((wide) => !wide)}
 		>
 			<i
@@ -33,7 +33,7 @@
 	{/each}
 
 	<button
-		class="w-[4vh] h-[4vh] rounded-[0.5vh] hover:bg-tertiary {$DEV_MODE
+		class="w-[4vh] h-[4vh] rounded-[0.5vh] hover:bg-tertiary bg-opacity-92 {$DEV_MODE
 			? 'text-accent'
 			: ''}
 		relative
@@ -44,7 +44,7 @@
 		before:px-[1vh]
 		before:py-[0.5vh]
 		before:-translate-x-full before:-translate-y-1/2
-		before:bg-tertiary before:text-white
+		before:bg-tertiary bg-opacity-92 before:text-white
 		before:rounded-md before:opacity-0
 		before:translate-all
 

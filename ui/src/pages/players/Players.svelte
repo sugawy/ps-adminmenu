@@ -87,10 +87,10 @@
 			</p>
 			<div class="w-full h-[96.5%] pt-[2vh] flex flex-col gap-[1vh]">
 				<p class="font-medium text-[1.7vh]">Quick Actions</p>
-				<div class="w-full bg-tertiary flex rounded-[0.5vh]">
+				<div class="w-full bg-tertiary bg-opacity-92 flex rounded-[0.5vh]">
 					<button
 						title="Kick Player"
-						class="h-[4.5vh] w-full rounded-l-[0.5vh] hover:bg-secondary
+						class="h-[4.5vh] w-full rounded-l-[0.5vh] hover:bg-secondary bg-opacity-90
 						relative
 						before:content-[attr(data-tip)]
 						before:absolute
@@ -98,7 +98,7 @@
 						before:left-1/2 before:-top-3
 						before:w-max before:max-w-xs
 						before:-translate-x-1/2 before:-translate-y-full
-						before:bg-tertiary before:text-white
+						before:bg-tertiary bg-opacity-92 before:text-white
 						before:rounded-md before:opacity-0
 						before:translate-all
 
@@ -122,7 +122,7 @@
 					</button>
 					<button
 						title="Ban Player"
-						class="h-[4.5vh] w-full hover:bg-secondary
+						class="h-[4.5vh] w-full hover:bg-secondary bg-opacity-90
 						relative
 						before:content-[attr(data-tip)]
 						before:absolute
@@ -130,7 +130,7 @@
 						before:left-1/2 before:-top-3
 						before:w-max before:max-w-xs
 						before:-translate-x-1/2 before:-translate-y-full
-						before:bg-tertiary before:text-white
+						before:bg-tertiary bg-opacity-92 before:text-white
 						before:rounded-md before:opacity-0
 						before:translate-all
 
@@ -154,7 +154,7 @@
 					</button>
 					<button
 						title="Teleport To Player"
-						class="h-[4.5vh] w-full hover:bg-secondary
+						class="h-[4.5vh] w-full hover:bg-secondary bg-opacity-90
 						relative
 						before:content-[attr(data-tip)]
 						before:absolute
@@ -162,7 +162,7 @@
 						before:left-1/2 before:-top-3
 						before:w-max before:max-w-xs
 						before:-translate-x-1/2 before:-translate-y-full
-						before:bg-tertiary before:text-white
+						before:bg-tertiary bg-opacity-92 before:text-white
 						before:rounded-md before:opacity-0
 						before:translate-all
 
@@ -194,7 +194,7 @@
 					</button>
 					<button
 						title="Bring Player"
-						class="h-[4.5vh] w-full hover:bg-secondary
+						class="h-[4.5vh] w-full hover:bg-secondary bg-opacity-90
 						relative
 						before:content-[attr(data-tip)]
 						before:absolute
@@ -202,7 +202,7 @@
 						before:left-1/2 before:-top-3
 						before:w-max before:max-w-xs
 						before:-translate-x-1/2 before:-translate-y-full
-						before:bg-tertiary before:text-white
+						before:bg-tertiary bg-opacity-92 before:text-white
 						before:rounded-md before:opacity-0
 						before:translate-all
 
@@ -234,7 +234,7 @@
 					</button>
 					<button
 						title="Revive Player"
-						class="h-[4.5vh] w-full hover:bg-secondary
+						class="h-[4.5vh] w-full hover:bg-secondary bg-opacity-90
 						relative
 						before:content-[attr(data-tip)]
 						before:absolute
@@ -242,7 +242,7 @@
 						before:left-1/2 before:-top-3
 						before:w-max before:max-w-xs
 						before:-translate-x-1/2 before:-translate-y-full
-						before:bg-tertiary before:text-white
+						before:bg-tertiary bg-opacity-92 before:text-white
 						before:rounded-md before:opacity-0
 						before:translate-all
 
@@ -274,7 +274,7 @@
 					</button>
 					<button
 						title="Spectate Player"
-						class="h-[4.5vh] w-full hover:bg-secondary
+						class="h-[4.5vh] w-full hover:bg-secondary bg-opacity-90
 						relative
 						before:content-[attr(data-tip)]
 						before:absolute
@@ -282,7 +282,7 @@
 						before:left-1/2 before:-top-3
 						before:w-max before:max-w-xs
 						before:-translate-x-1/2 before:-translate-y-full
-						before:bg-tertiary before:text-white
+						before:bg-tertiary bg-opacity-92 before:text-white
 						before:rounded-md before:opacity-0
 						before:translate-all
 
@@ -318,7 +318,7 @@
 				>
 					<p class="font-medium text-[1.7vh]">Licenses</p>
 					<div
-						class="w-full bg-tertiary rounded-[0.5vh] p-[1.5vh] text-[1.5vh]"
+						class="w-full bg-tertiary bg-opacity-92 rounded-[0.5vh] p-[1.5vh] text-[1.5vh]"
 					>
 						<p>
 							{$SELECTED_PLAYER.discord.replace(
@@ -346,7 +346,7 @@
 					</div>
 					<p class="font-medium text-[1.7vh]">Information</p>
 					<div
-						class="w-full bg-tertiary rounded-[0.5vh] p-[1.5vh] text-[1.5vh]"
+						class="w-full bg-tertiary bg-opacity-92 rounded-[0.5vh] p-[1.5vh] text-[1.5vh]"
 					>
 						<p>CID: {$SELECTED_PLAYER.cid}</p>
 						<p>Name: {$SELECTED_PLAYER.name}</p>
@@ -358,7 +358,7 @@
 					<p class="font-medium text-[1.7vh]">Vehicles</p>
 					{#each $SELECTED_PLAYER.vehicles as vehicle}
 						<div
-							class="w-full bg-tertiary flex flex-row rounded-[0.5vh] p-[1.5vh] text-[1.5vh]"
+							class="w-full bg-tertiary bg-opacity-92 flex flex-row rounded-[0.5vh] p-[1.5vh] text-[1.5vh]"
 						>
 							<div>
 								<p class=" font-medium text-[1.7vh]">
@@ -368,7 +368,7 @@
 							</div>
 							<div class="ml-auto h-full flex items-center">
 								<button
-									class="bg-secondary px-[1vh] py-[0.5vh] rounded-[0.5vh] border border-primary"
+									class="bg-secondary bg-opacity-90 px-[1vh] py-[0.5vh] rounded-[0.5vh] border border-primary"
 									on:click={() =>
 										SendNUI('clickButton', {
 											data: 'spawnPersonalVehicle',
@@ -420,7 +420,7 @@
 			selectedData={SelectData}
 		/>
 		<button
-			class="h-[3.8vh] px-[1.5vh] rounded-[0.5vh] bg-secondary hover:bg-opacity-90 border-[0.1vh] border-primary"
+			class="h-[3.8vh] px-[1.5vh] rounded-[0.5vh] bg-secondary bg-opacity-90 hover:bg-opacity-90 border-[0.1vh] border-primary"
 			on:click={() => {
 				// console.log('Time: ', selectedDataArray['Duration'].value)
 				// console.log('reason: ', selectedDataArray['Reason'].value)
@@ -465,7 +465,7 @@
 			selectedData={SelectData}
 		/>
 		<button
-			class="h-[3.8vh] px-[1.5vh] rounded-[0.5vh] bg-secondary hover:bg-opacity-90 border-[0.1vh] border-primary"
+			class="h-[3.8vh] px-[1.5vh] rounded-[0.5vh] bg-secondary bg-opacity-90 hover:bg-opacity-90 border-[0.1vh] border-primary"
 			on:click={() => {
 				SendNUI('clickButton', {
 					data: 'kickPlayer',

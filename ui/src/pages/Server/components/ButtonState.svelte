@@ -14,7 +14,7 @@
 </script>
 
 <button
-	class="w-[3vh] h-[3vh] rounded-[0.5vh] bg-secondary hover:bg-primary"
+	class="w-[3vh] h-[3vh] rounded-[0.5vh] bg-secondary bg-opacity-90 hover:bg-primary bg-opacity-90"
 	on:click={changeState}
 >
 	<i class={icon} />

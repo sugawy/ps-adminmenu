@@ -4,7 +4,7 @@
 </script>
 
 <div class="w-screen h-screen flex items-center">
-    <div class="w-[25vh] bg-primary flex flex-col gap-[2vh] rounded-[0.5vh] p-[2vh] ml-[2vh] font-medium" transition:fly={{ x: -100 }}>
+    <div class="w-[25vh] bg-primary bg-opacity-90 flex flex-col gap-[2vh] rounded-[0.5vh] p-[2vh] ml-[2vh] font-medium" transition:fly={{ x: -100 }}>
         <div class="h-[2vh] w-full flex items-center gap-[1vh] text-[1.5vh]">
             <i class="fas fa-code"></i>
             <p>Vehicle Information</p>

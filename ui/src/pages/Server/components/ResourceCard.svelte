@@ -13,7 +13,7 @@
 </script>
 
 <button
-	class="w-full flex justify-between rounded-[0.5vh] bg-tertiary items-center"
+	class="w-full flex justify-between rounded-[0.5vh] bg-tertiary bg-opacity-92 items-center"
 	on:click={() => (dropdownActive = !dropdownActive)}
 >
 	<div class="h-full p-[2vh] -mr-[8vh] flex flex-col items-start text-start">

@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="h-[85vh] flex rounded-[0.5vh] bg-primary {!$MENU_WIDE ? 'w-[40vh] mr-[5vh] ' : 'w-[106vh]'}" transition:fly={{ x: 100 }}
+	class="h-[85vh] flex rounded-[0.5vh] bg-primary bg-opacity-90 {!$MENU_WIDE ? 'w-[40vh] mr-[5vh] ' : 'w-[106vh]'}" transition:fly={{ x: 100 }}
 >
 	<Sidebar />
 	<div class="h-full flex {!$MENU_WIDE ? 'w-[33vh]' : 'w-[99vh]'}">
