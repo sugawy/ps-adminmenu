@@ -62,54 +62,63 @@ end)
 RegisterNetEvent('ps-adminmenu:server:SetJob', function(data, selectedData)
     local data = CheckDataFromKey(data)
     if not data or not CheckPerms(source, data.perms) then return end
+    
     local src = source
     local playerId, Job, Grade = selectedData["Player"].value, selectedData["Job"].value, selectedData["Grade"].value
     local Player = QBCore.Functions.GetPlayer(playerId)
     local name = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname
     local jobInfo = QBCore.Shared.Jobs[Job]
-    local grade = jobInfo["grades"][selectedData["Grade"].value]
-
+    
     if not jobInfo then
         TriggerClientEvent('QBCore:Notify', source, "Not a valid job", 'error')
         return
     end
-
+    
+    -- Fix: Use tonumber(Grade) to ensure proper grade lookup
+    local gradeNum = tonumber(Grade)
+    local grade = jobInfo["grades"][gradeNum]
+    
     if not grade then
         TriggerClientEvent('QBCore:Notify', source, "Not a valid grade", 'error')
         return
     end
-
-    Player.Functions.SetJob(tostring(Job), tonumber(Grade))
+    
+    Player.Functions.SetJob(tostring(Job), gradeNum)
+    
     if Config.RenewedPhone then
-        exports['qb-phone']:hireUser(tostring(Job), Player.PlayerData.citizenid, tonumber(Grade))
+        exports['qb-phone']:hireUser(tostring(Job), Player.PlayerData.citizenid, gradeNum)
     end
-
-    QBCore.Functions.Notify(src, locale("jobset", name, Job, Grade), 'success', 5000)
+    
+    QBCore.Functions.Notify(src, locale("jobset", name, Job, gradeNum), 'success', 5000)
 end)
 
 -- Set Gang
 RegisterNetEvent('ps-adminmenu:server:SetGang', function(data, selectedData)
     local data = CheckDataFromKey(data)
     if not data or not CheckPerms(source, data.perms) then return end
+    
     local src = source
     local playerId, Gang, Grade = selectedData["Player"].value, selectedData["Gang"].value, selectedData["Grade"].value
     local Player = QBCore.Functions.GetPlayer(playerId)
     local name = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname
     local GangInfo = QBCore.Shared.Gangs[Gang]
-    local grade = GangInfo["grades"][selectedData["Grade"].value]
-
+    
     if not GangInfo then
         TriggerClientEvent('QBCore:Notify', source, "Not a valid Gang", 'error')
         return
     end
+
+    -- Fix: Use tonumber(Grade) to ensure proper grade lookup
+    local gradeNum = tonumber(Grade)
+    local grade = GangInfo["grades"][gradeNum]
 
     if not grade then
         TriggerClientEvent('QBCore:Notify', source, "Not a valid grade", 'error')
         return
     end
 
-    Player.Functions.SetGang(tostring(Gang), tonumber(Grade))
-    QBCore.Functions.Notify(src, locale("gangset", name, Gang, Grade), 'success', 5000)
+    Player.Functions.SetGang(tostring(Gang), gradeNum)
+    QBCore.Functions.Notify(src, locale("gangset", name, Gang, gradeNum), 'success', 5000)
 end)
 
 -- Set Perms
