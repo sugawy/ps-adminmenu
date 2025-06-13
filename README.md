@@ -1,3 +1,6 @@
+# THIS WAS MADE TO ONLY WORK ON QBOX AND OX_INV. THANKS
+
+
 # ps-adminmenu
 The Admin Menu crafted by [OK1ez](https://github.com/OK1ez) and our dedicated team is user-friendly and intuitive. We invite you to contribute by submitting new features through PRs. We're always eager to review and consider new features. Make sure you use our template when opening Issues or they will be auto closed.
 

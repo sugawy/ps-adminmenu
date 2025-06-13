@@ -707,12 +707,4 @@ Config.OtherActions = {
     }
 }
 
-if GetResourceState('ox_inventory') == 'started' then
-    Config.Inventory = 'ox_inventory'
-elseif GetResourceState('ps-inventory') == 'started' then
-    Config.Inventory = 'ps-inventory'
-elseif GetResourceState('lj-inventory') == 'started' then
-    Config.Inventory = 'lj-inventory'
-elseif GetResourceState('qb-inventory') == 'started' then
-    Config.Inventory = 'qb-inventory'
-end
+Config.Inventory = 'ox_inventory' -- ox_inventory only ( if you wanna use other inv, edit the code yourself)

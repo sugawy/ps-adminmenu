@@ -1,25 +1,30 @@
 -- Clear Inventory
 RegisterNetEvent('ps-adminmenu:server:ClearInventory', function(data, selectedData)
     local data = CheckDataFromKey(data)
-    if not data or not CheckPerms(data.perms) then return end
+    if not data or not CheckPerms(source, data.perms) then return end
 
     local src = source
-    local player = selectedData["Player"].value
-    local Player = QBCore.Functions.GetPlayer(player)
-
+    local playerId = selectedData["Player"].value
+     
+    local Player = exports.qbx_core:GetPlayer(playerId)
+    
     if not Player then
-        return QBCore.Functions.Notify(source, locale("not_online"), 'error', 7500)
+        exports.qbx_core:Notify(source, locale("not_online"), 'error', 7500)
+        return
     end
 
-    if Config.Inventory == 'ox_inventory' then
-        exports.ox_inventory:ClearInventory(player)
+    local success, result = pcall(function()
+        return exports.ox_inventory:ClearInventory(playerId)
+    end)
+    
+    if success then
     else
-        exports[Config.Inventory]:ClearInventory(player, nil)
+        exports.qbx_core:Notify(src, "Failed to clear inventory: " .. tostring(result), 'error', 7500)
+        return
     end
 
-    QBCore.Functions.Notify(src,
-        locale("invcleared", Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname),
-        'success', 7500)
+    local playerName = Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname
+    exports.qbx_core:Notify(src, locale("invcleared", playerName), 'success', 7500)
 end)
 
 -- Clear Inventory Offline
